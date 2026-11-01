@@ -162,14 +162,6 @@ pub fn run(context: tauri::Context<Cef>) -> Result<()> {
             window
                 .set_focus()
                 .context("failed to focus the main window")?;
-            let initialization_handle = handle.clone();
-            drop(tauri::async_runtime::spawn(async move {
-                initialize(initialization_handle.clone())
-                    .await
-                    .expect("failed to initialize the desktop runtime");
-                initialization_handle.state::<Initialization>().ready();
-            }));
-
             let mut downloads = koharu_runtime::download::subscribe();
             let download_handle = handle.clone();
             drop(tauri::async_runtime::spawn(async move {
@@ -247,13 +239,7 @@ pub fn run(context: tauri::Context<Cef>) -> Result<()> {
                                     }
                                 }
                             };
-                            let downloads = download_handle.state::<DownloadChannel>();
-                            let mut channel = downloads.channel.lock();
-                            if let Some(current) = channel.as_ref()
-                                && current.send(download).is_err()
-                            {
-                                channel.take();
-                            }
+                            download_handle.state::<DownloadChannel>().send(download);
                         }
                         Err(tokio::sync::broadcast::error::RecvError::Lagged(skipped)) => {
                             tracing::warn!(skipped, "download channel fell behind");
@@ -261,6 +247,14 @@ pub fn run(context: tauri::Context<Cef>) -> Result<()> {
                         Err(tokio::sync::broadcast::error::RecvError::Closed) => break,
                     }
                 }
+            }));
+
+            let initialization_handle = handle.clone();
+            drop(tauri::async_runtime::spawn(async move {
+                initialize(initialization_handle.clone())
+                    .await
+                    .expect("failed to initialize the desktop runtime");
+                initialization_handle.state::<Initialization>().ready();
             }));
 
             Ok(())

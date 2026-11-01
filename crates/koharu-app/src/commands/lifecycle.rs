@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use anyhow::{Context as _, Result};
 use koharu_desktop::{CanvasState, Desktop};
 use koharu_scene::{AssetInput, AssetMetadata, AssetRole, At, PageDraft};
@@ -84,6 +85,31 @@ pub struct Download {
 #[derive(Default)]
 pub(crate) struct DownloadChannel {
     pub(crate) channel: Mutex<Option<Channel<Download>>>,
+    pub(crate) active: Mutex<HashMap<u64, Download>>,
+}
+
+impl DownloadChannel {
+    pub(crate) fn register(&self, channel: Channel<Download>) {
+        let active_downloads: Vec<Download> = self.active.lock().values().cloned().collect();
+        for download in active_downloads {
+            let _ = channel.send(download);
+        }
+        *self.channel.lock() = Some(channel);
+    }
+
+    pub(crate) fn send(&self, download: Download) {
+        let mut active = self.active.lock();
+        match download.state {
+            DownloadState::Running => {
+                active.insert(download.id, download.clone());
+            }
+            DownloadState::Finished | DownloadState::Failed => {
+                active.remove(&download.id);
+            }
+        }
+        drop(active);
+        self.channel.publish(download);
+    }
 }
 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Serialize, Type)]
@@ -198,14 +224,14 @@ pub(crate) async fn subscribe(
     on_project: Channel<Option<ProjectInfo>>,
     on_agent_activity: Channel<AgentActivity>,
 ) -> std::result::Result<StartupState, Error> {
-    handle.state::<Initialization>().wait().await?;
-
     *handle.state::<CanvasChannel>().channel.lock() = Some(on_canvas);
     *handle.state::<JobChannel>().channel.lock() = Some(on_job);
-    *handle.state::<DownloadChannel>().channel.lock() = Some(on_download);
+    handle.state::<DownloadChannel>().register(on_download);
     *handle.state::<ResourceChannel>().channel.lock() = Some(on_resources);
     *handle.state::<ProjectChannel>().channel.lock() = Some(on_project);
     *handle.state::<AgentActivityChannel>().channel.lock() = Some(on_agent_activity);
+
+    handle.state::<Initialization>().wait().await?;
 
     let canvas = handle.state::<Desktop>().canvas_state();
     let preferences = Preferences::load()?;
