@@ -65,7 +65,7 @@ pub fn list_tools() -> &'static [McpToolDefinition] {
             },
             McpToolDefinition {
                 name: "run_pipeline".to_string(),
-                description: "Run Koharu's automated processing pipeline: text detection, OCR, translation, or inpainting for the project, selected pages, or selected text elements.".to_string(),
+                description: "Run kore-minit's automated processing pipeline: text detection, OCR, translation, or inpainting for the project, selected pages, or selected text elements.".to_string(),
                 input_schema: json!({
                     "type": "object",
                     "properties": {
@@ -271,7 +271,7 @@ pub fn list_tools() -> &'static [McpToolDefinition] {
             },
             McpToolDefinition {
                 name: "open_project".to_string(),
-                description: "Open an existing project from Koharu's library by name.".to_string(),
+                description: "Open an existing project from kore-minit's library by name.".to_string(),
                 input_schema: json!({
                     "type": "object",
                     "properties": {
@@ -285,7 +285,7 @@ pub fn list_tools() -> &'static [McpToolDefinition] {
             },
             McpToolDefinition {
                 name: "create_project".to_string(),
-                description: "Create and open a new empty project in Koharu's library.".to_string(),
+                description: "Create and open a new empty project in kore-minit's library.".to_string(),
                 input_schema: json!({
                     "type": "object",
                     "properties": {
@@ -299,7 +299,7 @@ pub fn list_tools() -> &'static [McpToolDefinition] {
             },
             McpToolDefinition {
                 name: "list_projects".to_string(),
-                description: "List all projects in Koharu's library.".to_string(),
+                description: "List all projects in kore-minit's library.".to_string(),
                 input_schema: json!({
                     "type": "object",
                     "properties": {}

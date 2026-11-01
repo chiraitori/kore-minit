@@ -51,7 +51,7 @@ impl Store {
         ROOT.get_or_init(|| {
             dirs::cache_dir()
                 .unwrap_or_else(std::env::temp_dir)
-                .join("koharu")
+                .join("kore-minit")
                 .join("packages")
         })
     }

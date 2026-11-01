@@ -259,19 +259,19 @@ impl ProjectLibrary {
     fn candidate_roots() -> Vec<PathBuf> {
         let mut roots = Vec::new();
         if let Some(doc_dir) = dirs::document_dir() {
-            let doc_root = doc_dir.join("Koharu");
+            let doc_root = doc_dir.join("kore-minit");
             if !roots.contains(&doc_root) {
                 roots.push(doc_root);
             }
         }
         if let Some(data_dir) = dirs::data_local_dir() {
-            let app_root = data_dir.join("Koharu").join("Projects");
+            let app_root = data_dir.join("kore-minit").join("Projects");
             if !roots.contains(&app_root) {
                 roots.push(app_root);
             }
         }
         if let Some(home_dir) = dirs::home_dir() {
-            let home_root = home_dir.join(".koharu").join("projects");
+            let home_root = home_dir.join(".kore-minit").join("projects");
             if !roots.contains(&home_root) {
                 roots.push(home_root);
             }
@@ -289,10 +289,10 @@ impl ProjectLibrary {
             .context("no project directory candidates available")?;
 
         if let Some(data_dir) = dirs::data_local_dir() {
-            let app_root = data_dir.join("Koharu").join("Projects");
+            let app_root = data_dir.join("kore-minit").join("Projects");
             if preferred != app_root {
                 if let Some(doc_dir) = dirs::document_dir() {
-                    let doc_root = doc_dir.join("Koharu");
+                    let doc_root = doc_dir.join("kore-minit");
                     if preferred == app_root {
                         migrate_projects_if_needed(&doc_root, &app_root);
                     }

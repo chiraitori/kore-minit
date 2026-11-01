@@ -30,7 +30,7 @@ impl McpServer {
         let (shutdown_tx, mut shutdown_rx) = watch::channel(false);
         let sessions: SseSessionMap = Arc::new(Mutex::new(HashMap::new()));
 
-        tracing::info!(port, "Koharu MCP server started on 127.0.0.1:{port}");
+        tracing::info!(port, "kore-minit MCP server started on 127.0.0.1:{port}");
 
         let server_sessions = sessions.clone();
         tokio::spawn(async move {
@@ -38,7 +38,7 @@ impl McpServer {
                 tokio::select! {
                     _ = shutdown_rx.changed() => {
                         if *shutdown_rx.borrow() {
-                            tracing::info!("Koharu MCP server stopping");
+                            tracing::info!("kore-minit MCP server stopping");
                             break;
                         }
                     }
@@ -152,7 +152,7 @@ Connection: close\r\n\r\n";
     if (path == "/" || path == "/health") && method.eq_ignore_ascii_case("GET") {
         let body = json!({
             "status": "ok",
-            "server": "koharu-mcp",
+            "server": "kore-minit-mcp",
             "version": env!("CARGO_PKG_VERSION")
         }).to_string();
         send_json_response(&mut stream, 200, &body).await?;
@@ -278,7 +278,7 @@ async fn handle_jsonrpc(
                         "tools": {}
                     },
                     "serverInfo": {
-                        "name": "koharu",
+                        "name": "kore-minit",
                         "version": env!("CARGO_PKG_VERSION")
                     }
                 }),

@@ -1,6 +1,6 @@
 [package]
-name = "koharu"
-default-run = "koharu"
+name = "kore-minit"
+default-run = "kore-minit"
 version.workspace = true
 edition.workspace = true
 description.workspace = true

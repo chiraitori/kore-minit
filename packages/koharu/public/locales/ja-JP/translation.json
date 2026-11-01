@@ -29,14 +29,14 @@
     "cancel": "キャンセル",
     "cancelled": "キャンセルしました。",
     "deviceCode": "デバイスコード",
-    "deviceCodeHint": "ブラウザーが開きました。このコードを入力してKoharuを認証してください。",
+    "deviceCodeHint": "ブラウザーが開きました。このコードを入力してkore-minitを認証してください。",
     "emptyDescription": "エージェントにこのプロジェクトの確認、翻訳、編集、処理を依頼できます。ページ画像は必要な場合にのみ表示されます。",
-    "emptyTitle": "Koharuに何をさせますか？",
+    "emptyTitle": "kore-minitに何をさせますか？",
     "failed": "エージェントのリクエストに失敗しました。",
     "loading": "Codexを読み込み中…",
-    "message": "Koharuエージェントにメッセージを送信",
+    "message": "kore-minitエージェントにメッセージを送信",
     "model": "Codexモデル",
-    "placeholder": "Koharuにこのプロジェクトの作業を依頼…",
+    "placeholder": "kore-minitにこのプロジェクトの作業を依頼…",
     "properties": "プロパティ",
     "reasoning": "推論",
     "reasoningLevels": {
@@ -49,7 +49,7 @@
     },
     "send": "送信",
     "signIn": "Codexでサインイン",
-    "signInDescription": "ChatGPTサブスクリプションでサインインします。Koharuはデバイスコード認証を使用し、APIキーを求めることはありません。",
+    "signInDescription": "ChatGPTサブスクリプションでサインインします。kore-minitはデバイスコード認証を使用し、APIキーを求めることはありません。",
     "signInTitle": "Codexに接続",
     "signOut": "サインアウト",
     "signingIn": "サインインを待機中…",
@@ -72,7 +72,7 @@
   "canvas": {
     "empty": "ページを選択して開始します。",
     "fit": "ウィンドウに合わせる",
-    "surface": "Koharu キャンバス",
+    "surface": "kore-minit キャンバス",
     "unavailable": "WebGPU キャンバスを利用できません"
   },
   "colorPicker": {
@@ -89,7 +89,7 @@
     "reset": "リセット"
   },
   "errors": {
-    "fatalTitle": "Koharuを続行できませんでした",
+    "fatalTitle": "kore-minitを続行できませんでした",
     "tryAgain": "再試行"
   },
   "fontPicker": {
@@ -258,7 +258,7 @@
     "translationLabel": "{{name}}の翻訳"
   },
   "menu": {
-    "about": "Koharuについて",
+    "about": "kore-minitについて",
     "closeProject": "プロジェクトを閉じる",
     "delete": "選択項目を削除",
     "discord": "Discord",
@@ -388,7 +388,7 @@
       "applyAndSave": "適用して保存",
       "cancel": "キャンセル",
       "themePresets": {
-        "default": "Koharu Pink (オリジナル)",
+        "default": "kore-minit Pink (オリジナル)",
         "defaultDesc": "オリジナルの桜ピンクテーマ。",
         "nahida-sage": "Nahida Sage (デフォルト)",
         "nahida-sageDesc": "ナヒーダアイコンに調和するエメラルドセージグリーン。",
@@ -509,10 +509,10 @@
       "addFamily": "フォントファミリーを追加",
       "defaultFamilies": "既定のフォントファミリー",
       "description": "テキストレイヤーにファミリーが指定されていない場合に使う、順序付きフォントスタックを設定します。",
-      "empty": "既定のファミリーがありません。Koharuはシステムの代替フォントを使用します。",
+      "empty": "既定のファミリーがありません。kore-minitはシステムの代替フォントを使用します。",
       "familyLabel": "既定のフォントファミリー {{index}}",
       "fontFallback": "代替フォント",
-      "fontFallbackDescription": "Koharuは文字に対応する最初の利用可能なファミリーを使用します。",
+      "fontFallbackDescription": "kore-minitは文字に対応する最初の利用可能なファミリーを使用します。",
       "loadError": "フォントを読み込めませんでした。既存のファミリーは削除できます。",
       "loadingFonts": "フォントを読み込み中…",
       "removeFamily": "{{family}}を削除",
@@ -520,9 +520,9 @@
     },
     "mcp": {
       "active": "Running",
-      "clientsDesc": "Add one of these configurations to your preferred AI assistant to connect it to Koharu.",
+      "clientsDesc": "Add one of these configurations to your preferred AI assistant to connect it to kore-minit.",
       "clientsTitle": "Client Setup & Snippets",
-      "description": "Expose Koharu tools over local Streamable HTTP / SSE for AI client automation (Google Antigravity, Claude Desktop, Cursor, OpenCode).",
+      "description": "Expose kore-minit tools over local Streamable HTTP / SSE for AI client automation (Google Antigravity, Claude Desktop, Cursor, OpenCode).",
       "enableDesc": "Runs an embedded MCP server listening on localhost.",
       "enableTitle": "Enable MCP Server",
       "endpointDesc": "Standard HTTP/SSE endpoint for clients.",
@@ -551,7 +551,7 @@
     "loadingProjects": "プロジェクトを読み込み中…",
     "newDescription": "ページ、翻訳、書き出し用の新しいワークスペースを作成します。",
     "newProject": "新規プロジェクト",
-    "projectKind": "Koharuプロジェクト",
+    "projectKind": "kore-minitプロジェクト",
     "projectList": "プロジェクト",
     "projectName": "プロジェクト名",
     "projectNamePlaceholder": "新しいプロジェクト",
@@ -561,9 +561,9 @@
   },
   "startup": {
     "description": "ローカル AI ランタイムを読み込み、ワークスペースを準備しています。初回起動には少し時間がかかる場合があります。",
-    "opening": "Koharuを起動中…",
+    "opening": "kore-minitを起動中…",
     "status": "ローカルランタイムを初期化しています",
-    "title": "Koharu を準備しています"
+    "title": "kore-minit を準備しています"
   },
   "status": {
     "zoom": "ズーム"
@@ -585,12 +585,12 @@
   },
   "updater": {
     "available": {
-      "description": "Koharu <strong>{{version}}</strong> をインストールできます",
+      "description": "kore-minit <strong>{{version}}</strong> をインストールできます",
       "title": "アップデートが利用可能"
     },
     "close": "閉じる",
     "downloading": {
-      "subtitle": "Koharu {{version}}",
+      "subtitle": "kore-minit {{version}}",
       "title": "アップデートをダウンロード中…"
     },
     "error": {

@@ -441,7 +441,7 @@ impl Host for KoharuHost {
                     ),
                     definition::<RunPipeline>(
                         "run_pipeline",
-                        "Run Koharu's configured processing pipeline for the whole project, selected pages, or selected text elements.",
+                        "Run kore-minit's configured processing pipeline for the whole project, selected pages, or selected text elements.",
                     ),
                 ]
             })
@@ -673,7 +673,7 @@ impl Host for KoharuHost {
                 .await
             }
             "run_pipeline" => self.run_pipeline(arguments(&call)?, control).await,
-            name => bail!("unknown Koharu tool {name}"),
+            name => bail!("unknown kore-minit tool {name}"),
         }
     }
 }

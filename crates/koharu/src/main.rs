@@ -4,8 +4,8 @@
 mod mallinfo;
 
 use clap::Parser as _;
-use koharu::panic;
-use koharu::sentry;
+use kore_minit::panic;
+use kore_minit::sentry;
 use koharu_app as app;
 use tracing_subscriber::{Layer as _, filter::filter_fn, layer::SubscriberExt as _};
 
@@ -39,7 +39,7 @@ async fn main() {
             )
             .with(sentry::tracing_layer().with_filter(filter.clone()))
             .with(koharu_metrics::layer())
-            .with(koharu::tracing::TimingLayer::new().with_filter(filter)),
+            .with(kore_minit::tracing::TimingLayer::new().with_filter(filter)),
     )
     .expect("failed to set the global tracing subscriber");
     tokio::task::block_in_place(|| app::run(tauri::generate_context!()))

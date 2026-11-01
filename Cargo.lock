@@ -4715,29 +4715,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e2db585e1d738fc771bf08a151420d3ed193d9d895a36df7f6f8a9456b911ddc"
 
 [[package]]
-name = "koharu"
-version = "0.1.0"
-dependencies = [
- "clap",
- "console",
- "koharu-app",
- "koharu-metrics",
- "log",
- "rfd",
- "sentry",
- "serde_json",
- "tauri",
- "tauri-build",
- "tauri-plugin-opener",
- "tauri-plugin-process",
- "tauri-plugin-updater",
- "tokio",
- "tracing",
- "tracing-subscriber",
- "windows 0.62.2",
-]
-
-[[package]]
 name = "koharu-agent"
 version = "0.1.0"
 dependencies = [
@@ -5208,6 +5185,29 @@ name = "konst_proc_macros"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e037a2e1d8d5fdbd49b16a4ea09d5d6401c1f29eca5ff29d03d3824dba16256a"
+
+[[package]]
+name = "kore-minit"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "console",
+ "koharu-app",
+ "koharu-metrics",
+ "log",
+ "rfd",
+ "sentry",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tauri-plugin-opener",
+ "tauri-plugin-process",
+ "tauri-plugin-updater",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+ "windows 0.62.2",
+]
 
 [[package]]
 name = "kuchikiki"

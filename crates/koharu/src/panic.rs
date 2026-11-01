@@ -16,7 +16,7 @@ pub fn install() {
             .map(|l| format!("{}:{}", l.file(), l.line()))
             .unwrap_or_default();
 
-        tracing::error!(%msg, %location, "Koharu panicked");
+        tracing::error!(%msg, %location, "kore-minit panicked");
 
         if let Some(client) = sentry::Hub::current().client() {
             client.flush(Some(Duration::from_secs(2)));
@@ -24,9 +24,9 @@ pub fn install() {
 
         rfd::MessageDialog::new()
             .set_level(rfd::MessageLevel::Error)
-            .set_title("Koharu has stopped")
+            .set_title("kore-minit has stopped")
             .set_description(format!(
-                "Something went wrong and Koharu needs to close.\n\n{msg}\n\nat {location}"
+                "Something went wrong and kore-minit needs to close.\n\n{msg}\n\nat {location}"
             ))
             .set_buttons(rfd::MessageButtons::Ok)
             .show();

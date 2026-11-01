@@ -29,14 +29,14 @@
     "cancel": "İptal",
     "cancelled": "İptal edildi.",
     "deviceCode": "Cihaz kodu",
-    "deviceCodeHint": "Tarayıcınız açıldı. Koharu uygulamasını yetkilendirmek için bu kodu girin.",
+    "deviceCodeHint": "Tarayıcınız açıldı. kore-minit uygulamasını yetkilendirmek için bu kodu girin.",
     "emptyDescription": "Ajandan bu projeyi incelemesini, çevirmesini, düzenlemesini veya işlemesini isteyin. Sayfa görüntülerini yalnızca gerektiğinde görür.",
-    "emptyTitle": "Koharu ne yapsın?",
+    "emptyTitle": "kore-minit ne yapsın?",
     "failed": "Ajan isteği başarısız oldu.",
     "loading": "Codex yükleniyor…",
-    "message": "Koharu Ajanına mesaj gönder",
+    "message": "kore-minit Ajanına mesaj gönder",
     "model": "Codex modeli",
-    "placeholder": "Koharu’dan bu proje üzerinde çalışmasını isteyin…",
+    "placeholder": "kore-minit’dan bu proje üzerinde çalışmasını isteyin…",
     "properties": "Özellikler",
     "reasoning": "Akıl yürütme",
     "reasoningLevels": {
@@ -49,7 +49,7 @@
     },
     "send": "Gönder",
     "signIn": "Codex ile oturum aç",
-    "signInDescription": "ChatGPT aboneliğinizle oturum açın. Koharu cihaz kodu kimlik doğrulamasını kullanır ve hiçbir zaman API anahtarı istemez.",
+    "signInDescription": "ChatGPT aboneliğinizle oturum açın. kore-minit cihaz kodu kimlik doğrulamasını kullanır ve hiçbir zaman API anahtarı istemez.",
     "signInTitle": "Codex’e bağlan",
     "signOut": "Oturumu kapat",
     "signingIn": "Oturum açma bekleniyor…",
@@ -72,7 +72,7 @@
   "canvas": {
     "empty": "Başlamak için bir sayfa seçin.",
     "fit": "Pencereye Sığdır",
-    "surface": "Koharu tuvali",
+    "surface": "kore-minit tuvali",
     "unavailable": "WebGPU tuvali kullanılamıyor"
   },
   "colorPicker": {
@@ -89,7 +89,7 @@
     "reset": "Sıfırla"
   },
   "errors": {
-    "fatalTitle": "Koharu devam edemedi",
+    "fatalTitle": "kore-minit devam edemedi",
     "tryAgain": "Tekrar dene"
   },
   "fontPicker": {
@@ -473,10 +473,10 @@
       "addFamily": "Yazı tipi ailesi ekle",
       "defaultFamilies": "Varsayılan yazı tipi aileleri",
       "description": "Bir metin katmanına aile atanmadığında kullanılacak sıralı yazı tipi yığınını ayarlayın.",
-      "empty": "Varsayılan aile yok. Koharu sistem yedeğini kullanacak.",
+      "empty": "Varsayılan aile yok. kore-minit sistem yedeğini kullanacak.",
       "familyLabel": "Varsayılan yazı tipi ailesi {{index}}",
       "fontFallback": "Yedek yazı tipleri",
-      "fontFallbackDescription": "Koharu, metni destekleyen ilk kullanılabilir aileyi kullanır.",
+      "fontFallbackDescription": "kore-minit, metni destekleyen ilk kullanılabilir aileyi kullanır.",
       "loadError": "Yazı tipleri yüklenemedi. Mevcut aileler yine de kaldırılabilir.",
       "loadingFonts": "Yazı tipleri yükleniyor…",
       "removeFamily": "{{family}} ailesini kaldır",
@@ -484,9 +484,9 @@
     },
     "mcp": {
       "active": "Running",
-      "clientsDesc": "Add one of these configurations to your preferred AI assistant to connect it to Koharu.",
+      "clientsDesc": "Add one of these configurations to your preferred AI assistant to connect it to kore-minit.",
       "clientsTitle": "Client Setup & Snippets",
-      "description": "Expose Koharu tools over local Streamable HTTP / SSE for AI client automation (Google Antigravity, Claude Desktop, Cursor, OpenCode).",
+      "description": "Expose kore-minit tools over local Streamable HTTP / SSE for AI client automation (Google Antigravity, Claude Desktop, Cursor, OpenCode).",
       "enableDesc": "Runs an embedded MCP server listening on localhost.",
       "enableTitle": "Enable MCP Server",
       "endpointDesc": "Standard HTTP/SSE endpoint for clients.",
@@ -515,7 +515,7 @@
     "loadingProjects": "Projeler yükleniyor…",
     "newDescription": "Sayfalarınız, çevirileriniz ve dışa aktarımlarınız için temiz bir çalışma alanı oluşturun.",
     "newProject": "Yeni proje",
-    "projectKind": "Koharu projesi",
+    "projectKind": "kore-minit projesi",
     "projectList": "Projeler",
     "projectName": "Proje adı",
     "projectNamePlaceholder": "Yeni projem",
@@ -525,9 +525,9 @@
   },
   "startup": {
     "description": "Yerel yapay zekâ çalışma zamanları yükleniyor ve çalışma alanı hazırlanıyor. İlk açılış biraz sürebilir.",
-    "opening": "Koharu açılıyor…",
+    "opening": "kore-minit açılıyor…",
     "status": "Yerel çalışma zamanları başlatılıyor",
-    "title": "Koharu hazırlanıyor"
+    "title": "kore-minit hazırlanıyor"
   },
   "status": {
     "zoom": "Yakınlaştırma"
@@ -549,12 +549,12 @@
   },
   "updater": {
     "available": {
-      "description": "Koharu <strong>{{version}}</strong> yüklenmeye hazır",
+      "description": "kore-minit <strong>{{version}}</strong> yüklenmeye hazır",
       "title": "Güncelleme mevcut"
     },
     "close": "Kapat",
     "downloading": {
-      "subtitle": "Koharu {{version}}",
+      "subtitle": "kore-minit {{version}}",
       "title": "Güncelleme indiriliyor…"
     },
     "error": {

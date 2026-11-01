@@ -29,14 +29,14 @@
     "cancel": "Отмена",
     "cancelled": "Отменено.",
     "deviceCode": "Код устройства",
-    "deviceCodeHint": "Браузер открыт. Введите этот код, чтобы авторизовать Koharu.",
+    "deviceCodeHint": "Браузер открыт. Введите этот код, чтобы авторизовать kore-minit.",
     "emptyDescription": "Попросите агента проверить, перевести, изменить или обработать проект. Он будет просматривать изображения страниц только при необходимости.",
-    "emptyTitle": "Что должен сделать Koharu?",
+    "emptyTitle": "Что должен сделать kore-minit?",
     "failed": "Запрос агента завершился ошибкой.",
     "loading": "Загрузка Codex…",
-    "message": "Сообщение агенту Koharu",
+    "message": "Сообщение агенту kore-minit",
     "model": "Модель Codex",
-    "placeholder": "Попросите Koharu поработать над проектом…",
+    "placeholder": "Попросите kore-minit поработать над проектом…",
     "properties": "Свойства",
     "reasoning": "Рассуждение",
     "reasoningLevels": {
@@ -49,7 +49,7 @@
     },
     "send": "Отправить",
     "signIn": "Войти через Codex",
-    "signInDescription": "Войдите с подпиской ChatGPT. Koharu использует авторизацию по коду устройства и никогда не запрашивает ключ API.",
+    "signInDescription": "Войдите с подпиской ChatGPT. kore-minit использует авторизацию по коду устройства и никогда не запрашивает ключ API.",
     "signInTitle": "Подключить Codex",
     "signOut": "Выйти",
     "signingIn": "Ожидание входа…",
@@ -72,7 +72,7 @@
   "canvas": {
     "empty": "Выберите страницу, чтобы начать.",
     "fit": "Вписать в окно",
-    "surface": "Холст Koharu",
+    "surface": "Холст kore-minit",
     "unavailable": "Холст WebGPU недоступен"
   },
   "colorPicker": {
@@ -89,7 +89,7 @@
     "reset": "Сбросить"
   },
   "errors": {
-    "fatalTitle": "Koharu не может продолжить работу",
+    "fatalTitle": "kore-minit не может продолжить работу",
     "tryAgain": "Повторить"
   },
   "fontPicker": {
@@ -473,10 +473,10 @@
       "addFamily": "Добавить семейство шрифтов",
       "defaultFamilies": "Семейства шрифтов по умолчанию",
       "description": "Задайте упорядоченный стек шрифтов для текстового слоя без назначенного семейства.",
-      "empty": "Нет семейств по умолчанию. Koharu будет использовать системный запасной шрифт.",
+      "empty": "Нет семейств по умолчанию. kore-minit будет использовать системный запасной шрифт.",
       "familyLabel": "Семейство шрифтов по умолчанию {{index}}",
       "fontFallback": "Запасные шрифты",
-      "fontFallbackDescription": "Koharu использует первое доступное семейство, поддерживающее текст.",
+      "fontFallbackDescription": "kore-minit использует первое доступное семейство, поддерживающее текст.",
       "loadError": "Не удалось загрузить шрифты. Существующие семейства всё ещё можно удалить.",
       "loadingFonts": "Загрузка шрифтов…",
       "removeFamily": "Удалить {{family}}",
@@ -484,9 +484,9 @@
     },
     "mcp": {
       "active": "Running",
-      "clientsDesc": "Add one of these configurations to your preferred AI assistant to connect it to Koharu.",
+      "clientsDesc": "Add one of these configurations to your preferred AI assistant to connect it to kore-minit.",
       "clientsTitle": "Client Setup & Snippets",
-      "description": "Expose Koharu tools over local Streamable HTTP / SSE for AI client automation (Google Antigravity, Claude Desktop, Cursor, OpenCode).",
+      "description": "Expose kore-minit tools over local Streamable HTTP / SSE for AI client automation (Google Antigravity, Claude Desktop, Cursor, OpenCode).",
       "enableDesc": "Runs an embedded MCP server listening on localhost.",
       "enableTitle": "Enable MCP Server",
       "endpointDesc": "Standard HTTP/SSE endpoint for clients.",
@@ -515,7 +515,7 @@
     "loadingProjects": "Загрузка проектов…",
     "newDescription": "Создайте чистое рабочее пространство для страниц, переводов и экспорта.",
     "newProject": "Новый проект",
-    "projectKind": "Проект Koharu",
+    "projectKind": "Проект kore-minit",
     "projectList": "Проекты",
     "projectName": "Имя проекта",
     "projectNamePlaceholder": "Мой новый проект",
@@ -525,9 +525,9 @@
   },
   "startup": {
     "description": "Загрузка локальных сред выполнения ИИ и подготовка рабочего пространства. Первый запуск может занять некоторое время.",
-    "opening": "Запуск Koharu…",
+    "opening": "Запуск kore-minit…",
     "status": "Инициализация локальных сред выполнения",
-    "title": "Подготовка Koharu"
+    "title": "Подготовка kore-minit"
   },
   "status": {
     "zoom": "Масштаб"
@@ -549,12 +549,12 @@
   },
   "updater": {
     "available": {
-      "description": "Koharu <strong>{{version}}</strong> готов к установке",
+      "description": "kore-minit <strong>{{version}}</strong> готов к установке",
       "title": "Доступно обновление"
     },
     "close": "Закрыть",
     "downloading": {
-      "subtitle": "Koharu {{version}}",
+      "subtitle": "kore-minit {{version}}",
       "title": "Загрузка обновления…"
     },
     "error": {

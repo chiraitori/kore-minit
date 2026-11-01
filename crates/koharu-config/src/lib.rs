@@ -31,7 +31,7 @@ use serde::Serialize;
 use serde::de::DeserializeOwned;
 use tokio::sync::watch;
 
-const CONFIG_DIRECTORY: &str = ".koharu";
+const CONFIG_DIRECTORY: &str = ".kore-minit";
 const CONFIG_FILE: &str = "config.toml";
 
 static MANAGER: OnceLock<Result<Arc<Manager>, String>> = OnceLock::new();
